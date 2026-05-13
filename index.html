@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synent Task 5 | To-Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <span class="eyebrow">Task 5 - Intermediate</span>
+        <h1>To-Do List Web App</h1>
+        <p>Add tasks, mark them completed, delete items, and keep everything saved with localStorage.</p>
+      </section>
+
+      <section class="panel composer">
+        <form id="todo-form" class="todo-form">
+          <input id="todo-input" type="text" placeholder="Add a new task" maxlength="80" aria-label="Task title" />
+          <button type="submit">Add Task</button>
+        </form>
+        <div class="controls">
+          <div class="filter-group" role="tablist" aria-label="Task filters">
+            <button type="button" class="filter active" data-filter="all">All</button>
+            <button type="button" class="filter" data-filter="active">Active</button>
+            <button type="button" class="filter" data-filter="completed">Completed</button>
+          </div>
+          <button type="button" id="clear-completed" class="ghost">Clear Completed</button>
+        </div>
+      </section>
+
+      <section class="panel stats">
+        <div><span>Total</span><strong id="total-count">0</strong></div>
+        <div><span>Active</span><strong id="active-count">0</strong></div>
+        <div><span>Completed</span><strong id="completed-count">0</strong></div>
+      </section>
+
+      <section class="panel list-shell">
+        <h2>Tasks</h2>
+        <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+        <p id="empty-state" class="empty-state">No tasks yet. Add your first task above.</p>
+      </section>
+    </main>
+  </body>
+</html>
