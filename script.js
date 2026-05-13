@@ -50,15 +50,13 @@ function renderTodos() {
   const visibleTodos = getVisibleTodos();
 
   todoList.innerHTML = visibleTodos
-    .map(
-      (todo) => 
-        <li class="todo-item $${todo.completed ? 'completed' : ''}" data-id="${todo.id}">
-          <input class="task-toggle" type="checkbox" ${todo.completed ? 'checked' : ''}" aria-label="Mark task completed" />
-          <span class="task-text">${escapeHtml(todo.text)}</span>
-          <button class="delete-btn" type="button">Delete</button>
-        </li>
-      
-    )
+    .map((todo) => `
+      <li class="todo-item ${todo.completed ? 'completed' : ''}" data-id="${todo.id}">
+        <input class="task-toggle" type="checkbox" ${todo.completed ? 'checked' : ''} aria-label="Mark task completed" />
+        <span class="task-text">${escapeHtml(todo.text)}</span>
+        <button class="delete-btn" type="button">Delete</button>
+      </li>
+    `)
     .join('');
 
   emptyState.style.display = visibleTodos.length ? 'none' : 'block';
