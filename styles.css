@@ -40,7 +40,7 @@ input {
 .panel {
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: 1.35rem;
+  border-radius: 0.35rem;
   box-shadow: var(--shadow);
 }
 
@@ -104,7 +104,7 @@ ul {
 .filter,
 .ghost {
   border: 0;
-  border-radius: 999px;
+  border-radius: 12px;
   padding: 0.9rem 1.1rem;
   font-weight: 700;
   cursor: pointer;
@@ -144,7 +144,7 @@ ul {
 
 .stats div {
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background: #fff8f1;
 }
 
@@ -172,7 +172,7 @@ ul {
   gap: 0.85rem;
   padding: 1rem;
   border: 1px solid var(--line);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background: #fffdfb;
 }
 
